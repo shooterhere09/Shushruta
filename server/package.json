@@ -1,0 +1,48 @@
+{
+  "name": "shushruta",
+  "version": "Mark 1",
+  "description": "Organ Tranfer WEbApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hasan-py/MERN_Stack_Project_Hayroo_Ecommerce"
+  },
+  "author": "Hasan | https://hasan-py.github.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasan-py/MERN_Stack_Project_Hayroo_Ecommerce/issues"
+  },
+  "homepage": "https://github.com/hasan-py/MERN_Stack_Project_Hayroo_Ecommerce#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "braintree": "^3.0.0",
+    "cloudinary": "^2.8.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.5.2",
+    "fuse.js": "^7.1.0",
+    "geolib": "^3.3.4",
+    "i": "^0.3.6",
+    "jsonwebtoken": "^9.0.2",
+    "leaflet": "^1.7.1",
+    "libphonenumber-js": "^1.9.51",
+    "mongodb": "^7.1.1",
+    "mongoose": "^8.20.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "natural": "^8.1.0",
+    "nodemailer": "^7.0.10",
+    "nodemon": "^2.0.4",
+    "npm": "^11.6.2",
+    "react-leaflet": "^3.0.5",
+    "socket.io": "^4.8.1",
+    "twilio": "^4.23.0"
+  }
+}
