@@ -11,18 +11,16 @@
     "braintree-web-drop-in-react": "^1.2.1",
     "leaflet": "^1.9.4",
     "moment": "^2.29.0",
-    "nodemailer": "^7.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.15.0",
     "react-scripts": "^5.0.1",
-    "socket.io-client": "^4.8.1",
-    "twilio": "^5.10.3"
+    "socket.io-client": "^4.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "chmod +x node_modules/.bin/react-scripts && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
