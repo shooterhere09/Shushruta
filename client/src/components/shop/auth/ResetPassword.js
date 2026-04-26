@@ -17,7 +17,7 @@ const ResetPassword = () => {
     passwordChanged: false,
   });
 
-  const apiURL = process.env.REACT_APP_API_URL || "http://localhost:8000";
+  const apiURL = (process.env.REACT_APP_API_URL || "").replace(/\/$/, "");
 
   // Verify token on component mount
   useEffect(() => {
@@ -51,6 +51,17 @@ const ResetPassword = () => {
         }));
       }
     };
+
+    if (!apiURL) {
+      setState((prev) => ({
+        ...prev,
+        tokenValid: false,
+        verifying: false,
+        message: "Frontend is missing REACT_APP_API_URL configuration.",
+        messageType: "error",
+      }));
+      return;
+    }
 
     if (resetToken) {
       verifyToken();
@@ -90,6 +101,15 @@ const ResetPassword = () => {
       setState((prev) => ({
         ...prev,
         message: "Password must be at least 6 characters",
+        messageType: "error",
+      }));
+      return;
+    }
+
+    if (!apiURL) {
+      setState((prev) => ({
+        ...prev,
+        message: "Frontend is missing REACT_APP_API_URL configuration.",
         messageType: "error",
       }));
       return;

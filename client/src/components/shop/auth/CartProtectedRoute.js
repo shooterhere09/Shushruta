@@ -2,12 +2,20 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { isAuthenticate } from "./fetchApi";
 
+const getCartItems = () => {
+  try {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    return Array.isArray(cart) ? cart : [];
+  } catch {
+    return [];
+  }
+};
+
 const CartProtectedRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      JSON.parse(localStorage.getItem("cart")).length !== 0 &&
-      isAuthenticate() ? (
+      getCartItems().length !== 0 && isAuthenticate() ? (
         <Component {...props} />
       ) : (
         <Redirect
