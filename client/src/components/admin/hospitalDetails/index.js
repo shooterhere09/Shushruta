@@ -7,10 +7,10 @@ import { getUserById } from "./FetchApi";
 export const DashboardContext = createContext();
 
 const HospitalDetailsComponent = () => {
-  const { data, dispatch } = useContext(DashboardContext);
+  const { data } = useContext(DashboardContext);
   const [hospitalInfo, setHospitalInfo] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [, setError] = useState(null);
   const history = useHistory();
 
   useEffect(() => {

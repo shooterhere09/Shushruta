@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Layout, { DashboardUserContext } from "./Layout";
 import { sendOtp, verifyOtp } from "./FetchApi";
@@ -11,10 +11,6 @@ const PhoneVerifyInner = () => {
   const history = useHistory();
 
   const [state, setState] = useState({ otp: "", message: "", sending: false, verifying: false });
-
-  useEffect(() => {
-    // nothing
-  }, [userDetails]);
 
   const handleSend = async () => {
     if (!userDetails || !userDetails._id) return setState({ ...state, message: "User not found" });

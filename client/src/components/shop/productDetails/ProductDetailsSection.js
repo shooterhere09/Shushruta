@@ -9,7 +9,6 @@ import ProductDetailsSectionTwo from "./ProductDetailsSectionTwo";
 import { getSingleProduct } from "./FetchApi";
 import { cartListProduct } from "../partials/FetchApi";
 
-import { isWishReq, unWishReq, isWish } from "../home/Mixins";
 import { updateQuantity, slideImage, addToCart, cartList } from "./Mixins";
 import { totalCost } from "../partials/Mixins";
 
@@ -29,10 +28,6 @@ const ProductDetailsSection = (props) => {
   const [countdown, setCountdown] = useState(null);
   const [, setAlertq] = useState(false); // Alert when quantity greater than stock
   const [quantitiy, setQuantitiy] = useState(1); // Initialize quantity to 1
-
-  const [wList, setWlist] = useState(
-    JSON.parse(localStorage.getItem("wishList"))
-  ); // Wishlist State Control
 
   useEffect(() => {
     fetchData();

@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-import moment from "moment";
 import Countdown from "../home/Countdown";
 import { useHistory } from "react-router-dom";
 import { wishListProducts } from "./FetchApi";

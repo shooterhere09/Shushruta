@@ -2,7 +2,6 @@ import React, { Fragment, createContext, useReducer } from "react";
 import AdminLayout from "../layout";
 import { dashboardState, dashboardReducer } from "./DashboardContext";
 import TodaySell from "./TodaySell";
-import AdminDocuments from "./AdminDocuments";
 
 export { default as AdminDocuments } from "./AdminDocuments";
 export const DashboardContext = createContext();

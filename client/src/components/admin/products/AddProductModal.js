@@ -1,6 +1,6 @@
 import React, { Fragment, useContext, useState, useEffect } from "react";
 import { ProductContext } from "./index";
-import { createProduct, getAllProduct } from "./FetchApi";
+import { createProduct } from "./FetchApi";
 import { getAllCategory } from "../categories/FetchApi";
 import { getUserById } from "../hospitalDetails/FetchApi";
 

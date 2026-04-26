@@ -60,25 +60,7 @@ const CategoryList = () => {
 };
 
 const FilterList = () => {
-  const { data, dispatch } = useContext(HomeContext);
-
-  const fetchData = async () => {
-    dispatch({ type: "loading", payload: true });
-    try {
-      setTimeout(async () => {
-        let responseData = await getAllProduct();
-        if (responseData && responseData.Products) {
-          console.log(responseData.Products);
-          dispatch({ type: "setProducts", payload: responseData.Products });
-          dispatch({ type: "loading", payload: false });
-        }
-      }, 700);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  
+  const { data } = useContext(HomeContext);
 
   return (
     <div className={`${data.filterListDropdown ? "" : "hidden"}`} my-4>
