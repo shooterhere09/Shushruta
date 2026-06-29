@@ -21,7 +21,7 @@ router.get('/test', async (req, res) => {
 
   // in production require explicit confirm=yes
   if (shouldSend) {
-    if (process.env.NODE_ENV === 'production' && confirm !== 'yes') {
+    if (confirm !== 'yes') {
       response.send = { ok: false, reason: 'confirm-required-in-production' };
       return res.json(response);
     }
