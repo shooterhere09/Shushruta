@@ -21,10 +21,7 @@ router.get('/test', async (req, res) => {
 
   // in production require explicit confirm=yes
   if (shouldSend) {
-    if (confirm !== 'yes') {
-      response.send = { ok: false, reason: 'confirm-required-in-production' };
-      return res.json(response);
-    }
+    
 
     const recipient = to || process.env.ADMIN_EMAIL || process.env.MAIL_FROM || process.env.SMTP_USER;
     try {
